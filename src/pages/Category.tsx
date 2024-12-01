@@ -95,7 +95,7 @@ const CategoriesDisplay: React.FC = () => {
                  
 
                       <Link 
-                        to={`/categories/${category.id}/products`}
+                        to={`/categories/${category.id}`}
                         className="w-full mt-4 bg-sky-600 text-white py-2 rounded-lg hover:bg-sky-700 transition-colors flex items-center justify-center"
                       >
                         <ShoppingBag className="mr-2 w-5 h-5" />

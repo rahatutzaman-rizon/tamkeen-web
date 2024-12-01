@@ -86,6 +86,8 @@ export const fetchStores = async () => {
   return data.stores;
 };
 
+
+
 export const fetchStoreProduct = async (id: string | undefined) => {
   const { data } = await apiClient.get(`/stores/${id}/products`);
   return data.products;
