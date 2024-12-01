@@ -29,6 +29,7 @@ import { useLayoutEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { useAtom } from "jotai";
 import { authAtom } from "./atoms/authAtom";
+import Category from "./pages/Category";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -68,6 +69,7 @@ function App() {
           <Route path="/stores" element={<StoreGrid />} />
           <Route path="/stores/:slug" element={<StorePage />} />
           <Route path="/contact" element={<ContactUs />} />
+          <Route path="/category" element={<Category />} />
           <Route path="/categories" element={<Categories />} />
           <Route path="/categories/:slug" element={<ProductPage />} />
           <Route path="wishlist" element={<MyWishlist />} /> 

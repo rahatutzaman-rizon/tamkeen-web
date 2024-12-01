@@ -157,7 +157,7 @@ const Navbar = () => {
   const [authState, setAuthState] = useAtom(authAtom); // Get auth state
   const nav = [
     { label: "Home", route: "/" },
-    { label: "Categories", route: "/categories" },
+    { label: "Category", route: "/category" },
     { label: "Contact", route: "/contact" },
     { label: "Stores", route: "/stores" },
   ];
@@ -193,21 +193,30 @@ const Navbar = () => {
         </ul>
 
         {/* Search Bar */}
+      
         <label className="input input-bordered items-center gap-2 min-w-10 md:min-w-96 max-w-[70vw] self-center hidden md:flex">
-          <input type="text" className="grow" placeholder="Search" />
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 16 16"
-            fill="currentColor"
-            className="h-4 w-4 opacity-70"
-          >
-            <path
-              fillRule="evenodd"
-              d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
-              clipRule="evenodd"
-            />
-          </svg>
-        </label>
+  {/* Search Input */}
+  <input type="text" className="grow" placeholder="Search" />
+  
+
+  {/* Filter Icon */}
+  <button
+    type="button"
+    className="flex items-center justify-center h-14 w-12 rounded-full hover:bg-gray-100"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 16 16"
+      fill="currentColor"
+      className="h-8 w-8 opacity-70"
+    >
+      <path
+        d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-3Zm-2-6.5h8a.5.5 0 0 1 .43.777L9.6 7.4v3.1a.5.5 0 0 1-.276.447L7 12.577V7.4L3.57 4.777A.5.5 0 0 1 4 4Z"
+      />
+    </svg>
+  </button>
+</label>
+
 
         {/* Buttons and Cart */}
         <div className="flex items-center gap-4">
