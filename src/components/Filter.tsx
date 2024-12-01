@@ -6,7 +6,7 @@ import { FaCheck } from "react-icons/fa6";
 const Filter = ({
   categories,
   onCategoryClick,
-  setFilters,
+  
   filters,
   isLoading,
 }: any) => {
@@ -33,7 +33,7 @@ const Filter = ({
 
   const [priceRange, setPriceRange] = useState([20, 80]);
   const [selectedColor, setSelectedColor] = useState<string>("");
-  const [selectedSize, setSelectedSize] = useState<string>("");
+  // const [selectedSize, setSelectedSize] = useState<string>("");
   //const [selectedStyle, setSelectedStyle] = useState<string>("");
 
   const toggleSection = (section: string) => {
@@ -49,9 +49,9 @@ const Filter = ({
   };
 
   // Handle size selection
-  const handleSizeSelect = (size: string) => {
-    setSelectedSize((prev) => (prev === size ? "" : size));
-  };
+  // const handleSizeSelect = (size: string) => {
+  //   setSelectedSize((prev) => (prev === size ? "" : size));
+  // };
 
   // Handle style selection
   // const handleStyleSelect = (style: string) => {
@@ -60,14 +60,14 @@ const Filter = ({
 
   // Apply filters function
   // Inside Filter component
-  const applyFilters = () => {
-    setFilters({
-      color: selectedColor,
-      size: selectedSize,
-      min_price: priceRange[0].toString(),
-      max_price: priceRange[1].toString(),
-    });
-  };
+  // const applyFilters = () => {
+  //   setFilters({
+  //     color: selectedColor,
+  //     size: selectedSize,
+  //     min_price: priceRange[0].toString(),
+  //     max_price: priceRange[1].toString(),
+  //   });
+  // };
 
   useEffect(() => {
     // Function to read URL parameters
@@ -89,7 +89,7 @@ const Filter = ({
     }
 
     if (urlSize) {
-      setSelectedSize(urlSize);
+      // setSelectedSize(urlSize);
     }
   }, []);
 
