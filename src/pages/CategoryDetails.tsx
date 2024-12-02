@@ -40,6 +40,7 @@ const ProductCategoryPage: React.FC = () => {
         setProducts(productsResponse.data);
         setFilteredProducts(productsResponse.data);
         setLoading(false);
+        console.log(products)
       } catch (error) {
         console.error('Error fetching data:', error);
         setLoading(false);
@@ -71,32 +72,37 @@ const ProductCategoryPage: React.FC = () => {
   return (
     <div className="flex min-h-screen bg-sky-50 mt-24">
       {/* Categories Sidebar */}
-      <div className="w-64 bg-white p-4 border-r shadow-lg ">
-        <h2 className="text-2xl font-bold text-sky-900 mb-6">Categories</h2>
-        <div className="space-y-2 overflow-y-auto ">
-          {categories.map(category => (
-            <div 
-              key={category.id}
-              className={`
-                p-2 cursor-pointer rounded-lg  
-                ${selectedCategory === category.id ? 'bg-sky-200' : 'hover:bg-sky-100'}
-                transition-colors duration-200
-              `}
-              onClick={() => handleCategoryFilter(category.id)}
-            >
-              <span className="text-sm font-medium">{category.category_name}</span>
-            </div>
-          ))}
+     
+{/* Categories Sidebar */}
+<div className="w-64 bg-white p-4 border-r shadow-lg flex flex-col">
+  <h2 className="text-2xl font-bold text-sky-900 mb-6 flex-shrink-0">Categories</h2>
+  <div className="overflow-y-auto scrollbar-thin scrollbar-thumb-sky-300 scrollbar-track-sky-100 pr-2">
+    <div className="space-y-2">
+      {categories.map(category => (
+        <div 
+          key={category.id}
+          className={`
+            p-2 cursor-pointer rounded-lg  
+            ${selectedCategory === category.id ? 'bg-sky-200' : 'hover:bg-sky-100'}
+            transition-colors duration-200
+          `}
+          onClick={() => handleCategoryFilter(category.id)}
+        >
+          <span className="text-sm font-medium">{category.category_name}</span>
         </div>
-      </div>
-
+      ))}
+    </div>
+  </div>
+</div>
       {/* Products Grid */}
       <div className="flex-grow p-6 ">
         <h1 className="text-3xl font-bold text-sky-900 mb-6">
+            
           {selectedCategory 
             ? `Products in ${categories.find(c => c.id === selectedCategory)?.category_name}` 
             : 'All Products'}
         </h1>
+        
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 ">
           {filteredProducts.length > 0 ? (
             filteredProducts.map(product => (

@@ -49,7 +49,7 @@ const Categories = () => {
   // Update query key when filters change
   const { data: products, isLoading: isProductLoading } = useQuery({
     queryKey: ["products", filters],
-    queryFn: () => fetchProducts(filters),
+    queryFn: () => fetchProducts(),
   });
 
   const handleCategoryClick = (id: number) => {
