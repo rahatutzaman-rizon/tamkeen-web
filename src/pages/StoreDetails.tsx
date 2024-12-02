@@ -157,17 +157,14 @@ const StoreDetailsComponent: React.FC = () => {
           <div className="relative">
             {/* Hero Image Section */}
             <div className="relative h-[500px]">
-              {storeData.image ? (
+              
                 <img
                   src="https://i.ibb.co.com/WvL8zGs/mike-petrucci-c9-FQyq-IECds-unsplash.jpg"
                   alt={storeData.store_name}
                   className="absolute inset-0 w-full h-full object-cover"
                 />
-              ) : (
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
-                  <Store className="text-white" size={120} />
-                </div>
-              )}
+
+             
               <div className="absolute inset-0 bg-black bg-opacity-40"></div>
               <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
                 <h1 className="text-5xl font-bold mb-2">{storeData.store_name}</h1>

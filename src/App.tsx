@@ -31,6 +31,7 @@ import { useAtom } from "jotai";
 import { authAtom } from "./atoms/authAtom";
 import Category from "./pages/Category";
 import StoreDetailsComponent from "./pages/StoreDetails";
+import CategoryBrowser from "./pages/CategoryDetails";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -69,12 +70,16 @@ function App() {
           <Route path="/signup" element={<SignUpPage />} />
           <Route path="/stores" element={<StoreGrid />} />
           <Route path="/stores/:slug" element={<StorePage />} />
+ 
+          <Route path="/categories/:id" element={<CategoryBrowser />} />
+
+
 
           <Route path="/store/:id" element={<StoreDetailsComponent />} />
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/category" element={<Category />} />
           <Route path="/categories" element={<Categories />} />
-          <Route path="/categories/:slug" element={<ProductPage />} />
+          <Route path="/category/:slug" element={<ProductPage />} />
           <Route path="wishlist" element={<MyWishlist />} /> 
           <Route path="/cart" element={<ShoppingCart />} />
           <Route path="/checkout" element={<ProtectedRoute element={<Checkout />} />} /> {/* Protected route */}

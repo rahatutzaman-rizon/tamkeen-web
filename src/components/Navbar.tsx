@@ -158,6 +158,7 @@ const Navbar = () => {
   const nav = [
     { label: "Home", route: "/" },
     { label: "Category", route: "/category" },
+    { label: "Categories", route: "/categories" },
     { label: "Contact", route: "/contact" },
     { label: "Stores", route: "/stores" },
   ];
