@@ -184,7 +184,7 @@ const StoreDetails = () => {
           <h1 className="text-3xl sm:text-4xl font-bold">{store?.store_name}</h1>
           {/* <p className="mt-3 text-xl sm:text-2xl">{store.description}</p> */}
           <div className="mt-5 flex space-x-4">
-            <a href="#shop" className="btn btn-primary text-white text-lg">
+            <a href="category" className="btn btn-primary text-white text-lg">
               Shop Now
             </a>
             <a

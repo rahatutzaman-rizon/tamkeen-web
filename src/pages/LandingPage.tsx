@@ -235,7 +235,7 @@ const LandingPage = () => {
                   </p>
                 </div>
                 {item.button && (
-                  <Link  to='/categories' className={`btn ${item.button} mt-4`}>
+                  <Link  to='/categories/17' className={`btn ${item.button} mt-4`}>
                     Shop Now<FaArrowRightLong />
                   </Link>
                 )}
@@ -262,7 +262,7 @@ const LandingPage = () => {
             : flashSales?.map((product: any) => <ProductCard {...product} />)}
         </div>
         <div>
-          <Link to="/categories" className="btn btn-primary text-white">
+          <Link to="/flashSale" className="btn btn-primary text-white">
             View all Products
           </Link>
         </div>

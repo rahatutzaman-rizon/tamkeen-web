@@ -184,14 +184,14 @@ const StoreDetailsComponent: React.FC = () => {
             <div className="bg-white py-6 px-8">
               <div className="flex justify-center space-x-6 mb-6">
                 <a 
-                  href="#shop" 
+                  href="/categories/17" 
                   className="flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full text-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition shadow-lg"
                 >
                   <ShoppingCart size={24} />
                   <span>Shop Now</span>
                 </a>
                 <a
-                  href="#explore"
+                  href="/"
                   className="flex items-center space-x-2 border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-full text-lg font-semibold hover:bg-blue-600 hover:text-white transition"
                 >
                   <Compass size={24} />

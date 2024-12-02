@@ -32,6 +32,8 @@ import { authAtom } from "./atoms/authAtom";
 import Category from "./pages/Category";
 import StoreDetailsComponent from "./pages/StoreDetails";
 import CategoryBrowser from "./pages/CategoryDetails";
+import ProductSearch from "./components/Input";
+import FlashSalePage from "./pages/FlashSeller";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -72,6 +74,8 @@ function App() {
           <Route path="/stores/:slug" element={<StorePage />} />
  
           <Route path="/categories/:id" element={<CategoryBrowser />} />
+          <Route path="/input" element={<ProductSearch></ProductSearch>} />
+          <Route path="/flashSale" element={<FlashSalePage></FlashSalePage>} />
 
 
 
